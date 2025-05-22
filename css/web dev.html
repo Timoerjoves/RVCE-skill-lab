@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrimony Registration Form</title>
+    <style>
+        body {
+            /* Romantic, soft background image with overlay */
+            background:
+                linear-gradient(rgba(255, 192, 203, 0.55), rgba(173, 216, 230, 0.55)),
+                url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .registration-form {
+            background: #fff;
+            max-width: 370px;
+            margin: 60px auto;
+            padding: 28px 22px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .registration-form h2 {
+            text-align: center;
+            color: #e67e22;
+            margin-bottom: 18px;
+        }
+        .registration-form label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+            color: #4a90e2;
+        }
+        .registration-form input[type="text"],
+        .registration-form input[type="email"],
+        .registration-form input[type="password"],
+        .registration-form input[type="number"],
+        .registration-form select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .registration-form button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #e67e22;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .registration-form button:hover {
+            background: #ba6a13;
+        }
+    </style>
+</head>
+<body>
+    <form class="registration-form">
+        <div style="text-align:center; margin-bottom: 10px;">
+            <img src="okok.png" alt="User Icon" style="width:60px; height:60px;">
+        </div>
+        <h2>RVCE Matrimony Registration</h2>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+            <option value="None of the above">None of the above</option>
+        </select>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="18" max="99" required>
+
+        <label for="USN number">USN</label>
+        <input type="email" id="USN number" name="USN" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="religion">Branch</label>
+        <input type="text" id="religion" name="religion" required>
+
+        <label for="caste">Caste</label>
+        <select id="caste" name="caste">
+            <option value="">Select</option>
+            <option value="general">General</option>
+            <option value="obc">OBC</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+        </select>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <button onclick="location.href='matches.html'">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="Matches" style="width:24px;height:24px;"> Find Matches
+        </button>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

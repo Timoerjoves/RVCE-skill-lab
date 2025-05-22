@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            background: #f0f4f8;
+            font-family: Arial, sans-serif;
+        }
+        .registration-form {
+            background: #fff;
+            max-width: 350px;
+            margin: 60px auto;
+            padding: 25px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .registration-form h2 {
+            text-align: center;
+            color: #4a90e2;
+        }
+        .registration-form label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+        .registration-form input[type="text"],
+        .registration-form input[type="email"],
+        .registration-form input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .registration-form button {
+            margin-top: 18px;
+            width: 100%;
+            padding: 10px;
+            background: #4a90e2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .registration-form button:hover {
+            background: #357ab8;
+        }
+    </style>
+</head>
+<body>
+    <form class="registration-form">
+        <h2>RVCE Registration</h2>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <lable for="USN number"> USN</lable>
+        <input type="text" id="USN number" name="USN number" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="branch">Branch</label>
+        <input type="text" id="branch" name="branch" required>
+
+        <button type="submit">Sign Up</button>
+
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Matches - RVCE Matrimony</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            /* Romantic gradient background */
+            background: linear-gradient(135deg, #fcb7b7 0%, #f7d9e3 50%, #b7eaff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .swipe-container {
+            max-width: 420px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card {
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(255, 105, 180, 0.18);
+            padding: 38px 28px 28px 28px;
+            text-align: center;
+            margin-bottom: 24px;
+            width: 350px;
+            transition: box-shadow 0.3s, transform 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+        .card img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 18px;
+            border: 4px solid #ffb6c1;
+            box-shadow: 0 2px 12px #b2bec3;
+        }
+        .card h2 {
+            color: #e75480;
+            margin-bottom: 8px;
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .card p {
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .swipe-btns {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .swipe-btns button {
+            margin: 10px 0;
+            padding: 12px 32px;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+            transition: background 0.2s, transform 0.15s;
+        }
+        .like {
+            background: linear-gradient(90deg, #ff6f91 60%, #ffb6c1 100%);
+            color: #fff;
+        }
+        .like:hover {
+            background: linear-gradient(90deg, #e75480 60%, #ffb6c1 100%);
+            transform: scale(1.07);
+        }
+        .pass {
+            background: linear-gradient(90deg, #b7eaff 60%, #6dd5ed 100%);
+            color: #333;
+        }
+        .pass:hover {
+            background: linear-gradient(90deg, #6dd5ed 60%, #b7eaff 100%);
+            transform: scale(1.07);
+        }
+        /* Heart doodle background */
+        .heart-bg {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            opacity: 0.12;
+            z-index: 0;
+        }
+        @media (max-width: 500px) {
+            .card {
+                width: 98vw;
+                padding: 18px 4vw 18px 4vw;
+            }
+            .card img {
+                width: 90px;
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="swipe-container">
+        <div id="profile-card" class="card">
+            <img class="heart-bg" src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Heart Doodle">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya Sharma">
+            <h2>Priya Sharma</h2>
+            <p>Branch: CSE<br>Age: 22</p>
+            <p>Hobbies: Dancing, Reading, Painting</p>
+            <p style="color:#e75480;font-style:italic;">"Looking for a kind and fun partner!"</p>
+        </div>
+        <div class="swipe-btns">
+            <button class="pass" onclick="nextProfile()">Pass</button>
+            <button class="like" onclick="nextProfile()">Like</button>
+        </div>
+    </div>
+    <script>
+        // Nice looking girls' profiles
+        const profiles = [
+            {
+                name: "Priya Sharma",
+                img: "https://randomuser.me/api/portraits/women/44.jpg",
+                branch: "CSE",
+                age: 22,
+                hobbies: "Dancing, Reading, Painting",
+                quote: "Looking for a kind and fun partner!"
+            },
+            {
+                name: "Sneha Rao",
+                img: "https://randomuser.me/api/portraits/women/68.jpg",
+                branch: "ISE",
+                age: 21,
+                hobbies: "Singing, Yoga, Travelling",
+                quote: "Let's make memories together!"
+            },
+            {
+                name: "Aishwarya Nair",
+                img: "https://randomuser.me/api/portraits/women/65.jpg",
+                branch: "ECE",
+                age: 23,
+                hobbies: "Photography, Baking, Movies",
+                quote: "Searching for a genuine connection."
+            },
+            {
+                name: "Divya Patel",
+                img: "https://randomuser.me/api/portraits/women/12.jpg",
+                branch: "EEE",
+                age: 22,
+                hobbies: "Cycling, Art, Cooking",
+                quote: "Ready for a new adventure!"
+            }
+        ];
+        let idx = 0;
+        function nextProfile() {
+            idx = (idx + 1) % profiles.length;
+            const p = profiles[idx];
+            document.getElementById('profile-card').innerHTML = `
+                <img class="heart-bg" src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Heart Doodle">
+                <img src="${p.img}" alt="${p.name}">
+                <h2>${p.name}</h2>
+                <p>Branch: ${p.branch}<br>Age: ${p.age}</p>
+                <p>Hobbies: ${p.hobbies}</p>
+                <p style="color:#e75480;font-style:italic;">"${p.quote}"</p>
+            `;
+        }
+    </script>
+</body>
+</html>

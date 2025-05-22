@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 3 - Simple Calculator</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(-45deg, #fcb7b7, #b7eaff, #f7d9e3, #c2ffd8);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        .calculator {
+            background: rgba(255,255,255,0.97);
+            padding: 40px 32px 32px 32px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+            text-align: center;
+            position: relative;
+            min-width: 340px;
+            max-width: 95vw;
+        }
+        .calculator h2 {
+            color: #4a90e2;
+            margin-bottom: 22px;
+            letter-spacing: 1.5px;
+        }
+        input, select, button {
+            margin: 10px 6px;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1.1em;
+        }
+        input, select {
+            width: 120px;
+            max-width: 40vw;
+        }
+        button {
+            background: linear-gradient(90deg, #4a90e2 60%, #50e3c2 100%);
+            color: #fff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            min-width: 120px;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #357ab8 60%, #38bfa7 100%);
+            transform: scale(1.07);
+        }
+        #result {
+            margin-top: 22px;
+            font-size: 1.3em;
+            color: #27ae60;
+            font-weight: bold;
+            min-height: 32px;
+        }
+        .calc-icon {
+            width: 64px;
+            margin-bottom: 18px;
+            animation: calcBounce 2s infinite;
+        }
+        @keyframes calcBounce {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(-18px);}
+        }
+        .heart {
+            position: absolute;
+            width: 36px;
+            opacity: 0.16;
+            animation: floatHeart 6s infinite linear;
+        }
+        .heart1 { left: -24px; top: 12px; animation-delay: 0s;}
+        .heart2 { right: -24px; top: 48px; animation-delay: 2s;}
+        .heart3 { left: 36px; bottom: 12px; animation-delay: 4s;}
+        @keyframes floatHeart {
+            0% { transform: translateY(0) scale(1);}
+            50% { transform: translateY(-30px) scale(1.2);}
+            100% { transform: translateY(0) scale(1);}
+        }
+        @media (max-width: 600px) {
+            .calculator {
+                min-width: 90vw;
+                padding: 18px 2vw 18px 2vw;
+            }
+            .calc-icon { width: 44px; }
+            .heart { width: 22px; }
+            input, select, button { width: 90vw; max-width: 90vw; }
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="Calculator Icon" class="calc-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="heart heart1" alt="Heart">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="heart heart2" alt="Heart">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" class="heart heart3" alt="Heart">
+        <h2>Simple Calculator</h2>
+        <input type="number" id="num1" placeholder="First number">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="num2" placeholder="Second number">
+        <br>
+        <button onclick="calculate()">Calculate</button>
+        <div id="result"></div>
+    </div>
+    <script src="simple calculator.js"></script>
+</body>
+</html>

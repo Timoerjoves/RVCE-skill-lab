@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RVCE Skill Lab</title>
+    <style>
+        body {
+            /* Add a large, professional background image with overlay */
+            background: 
+                linear-gradient(rgba(240,244,248,0.92), rgba(207,222,243,0.92)),
+                url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 520px;
+            margin: 60px auto;
+            background: rgba(255,255,255,0.96);
+            border-radius: 22px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+            padding: 38px 28px 28px 28px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .doodle {
+            position: absolute;
+            width: 70px;
+            opacity: 0.18;
+            z-index: 0;
+        }
+        .doodle.top-left {
+            top: 10px;
+            left: 10px;
+            transform: rotate(-15deg);
+        }
+        .doodle.top-right {
+            top: 10px;
+            right: 10px;
+            transform: rotate(10deg);
+        }
+        .doodle.bottom-left {
+            bottom: 10px;
+            left: 10px;
+            transform: rotate(8deg);
+        }
+        .doodle.bottom-right {
+            bottom: 10px;
+            right: 10px;
+            transform: rotate(-10deg);
+        }
+        h1 {
+            color: #4a90e2;
+            margin-bottom: 18px;
+            font-size: 2.7em;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            z-index: 1;
+            position: relative;
+            text-shadow: 1px 2px 8px #e0eafc;
+        }
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            gap: 22px;
+            margin-bottom: 18px;
+            z-index: 1;
+            position: relative;
+        }
+        .icon-row img {
+            width: 48px;
+            height: 48px;
+            filter: drop-shadow(0 2px 6px #b2bec3);
+        }
+        .dashboard {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            z-index: 1;
+            position: relative;
+        }
+        .dashboard button {
+            padding: 15px 0;
+            font-size: 1.15em;
+            border: none;
+            border-radius: 9px;
+            background: linear-gradient(90deg, #4a90e2 60%, #50e3c2 100%);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+            transition: background 0.2s, transform 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .dashboard button:hover {
+            background: linear-gradient(90deg, #357ab8 60%, #38bfa7 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        @media (max-width: 600px) {
+            .container {
+                max-width: 98vw;
+                padding: 18px 4vw 18px 4vw;
+            }
+            .doodle {
+                width: 44px;
+            }
+            .icon-row img {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    </style>
+</head>
+<script src="dashboard.js"></script>
+<body>
+    <div class="container">
+        <!-- Doodle SVGs (books, computer, etc.) -->
+        <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" class="doodle top-left" alt="Books Doodle">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="doodle top-right" alt="Computer Doodle">
+        <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" class="doodle bottom-left" alt="Books Doodle">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" class="doodle bottom-right" alt="Computer Doodle">
+
+        <h1>RVCE Skill Lab</h1>
+        <div class="icon-row">
+            <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Books Icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Computer Icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Doodle Icon">
+        </div>
+        <div class="dashboard">
+            <button onclick="location.href='profile.html'">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Day 1" style="width:24px;height:24px;"> Day 1 Projects
+            </button>
+            <button onclick="location.href='web dev.html'">
+                <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Day 2" style="width:24px;height:24px;"> Day 2 Projects
+            </button>
+            <button onclick="location.href='day3.html'">
+                <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="Day 3" style="width:24px;height:24px;"> Day 3 Projects
+            </button>
+            <button onclick="location.href='day4.html'">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135796.png" alt="Day 4" style="width:24px;height:24px;"> Day 4 Projects
+            </button>
+            <button onclick="location.href='day5.html'">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135779.png" alt="Day 5" style="width:24px;height:24px;"> Day 5 Projects
+            </button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile Card</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-size: 16px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255,255,255,0.97);
+            max-width: 370px;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+            padding: 36px 28px 28px 28px;
+            text-align: center;
+            position: relative;
+        }
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #4a90e2;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 12px #b2bec3;
+            background: #f0f4f8;
+        }
+        .profile-name {
+            font-size: 2em;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+        }
+        .profile-title {
+            font-size: 1.1em;
+            color: #4a90e2;
+            font-weight: bold;
+            margin-bottom: 2px;
+             }
+    
+        .profile-trash  {
+            font-size: 1em;
+            color: #333534;
+            
+            margin-bottom: 8px;
+        }
+        .profile-edu {
+            font-size: 1em;
+            color: #000000;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        .profile-college {
+            font-size: 1em;
+            color: #27ae60;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .profile-skills {
+            font-style: italic;
+            color: #e67e22;
+            margin-bottom: 10px;
+        }
+        .profile-status {
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .profile-desc {
+            color: #444;
+            margin: 12px 0 18px 0;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        .profile-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 9px 22px;
+            background: linear-gradient(90deg, #4a90e2 60%, #50e3c2 100%);
+            color: #fff;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+            transition: background 0.2s, transform 0.15s;
+        }
+        .profile-link:hover {
+            background: linear-gradient(90deg, #357ab8 60%, #38bfa7 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        @media (max-width: 500px) {
+            .profile-card {
+                max-width: 98vw;
+                padding: 18px 4vw 18px 4vw;
+            }
+            .profile-pic {
+                width: 90px;
+                height: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="profilepic.jpg" alt="Profile Picture" class="profile-pic">
+        <h1 class="profile-name">Chandan Vajragiri</h1>
+        <h2 class="profile-title">Student</h2>
+       <p class="profile-trash">(idk why the profile picture is not working)</p>
+
+        <p class="profile-edu">B.E. in Computer Science</p>
+        <p class="profile-college">RV College of Engineering</p>
+        <p class="profile-skills">Skills: HTML, CSS</p>
+        <p class="profile-status">Attending for the sake of attendence!!!!! </p>
+        <a href="#" class="profile-link">View Profile</a>
+    </div>
+</html>

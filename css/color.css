@@ -1,0 +1,16 @@
+/* Named colors example */
+.red-text {
+    color: red;
+}
+
+.blue-bg {
+    background-color: blue;
+}
+
+.green-border {
+    border: 2px solid green;
+}
+
+.yellow-highlight {
+    background-color: yellow;
+}
